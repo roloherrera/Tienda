@@ -93,7 +93,7 @@ nav {
 }
 
 #tablaDetalle tr:nth-child(odd){
-    background-color: coral;
+    background-color: greenyellow;
     color: black;
     
 }
