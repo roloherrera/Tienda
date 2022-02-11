@@ -7,26 +7,36 @@
             <meta charset="UTF-8">
             <meta name="description" content="Esta pagina contiene etiquetas del tipo html5 y luego enlaces o definicion de estilos css3">
             <meta name="keywords" content="html5, css3, web, fidelitas">
-            <link href="CSS/Estilos.css" rel="stylesheet" type="text/css"/>
+            <link href="CSS/Menu.css" rel="stylesheet" type="text/css"/>
         </head>
         <body>
-            <header id="encabezado"> <!-- Etiqueta para ofrecerle al browser info de que es un encabezado -->
-                <h2>TechShop</h2>
+            <header class="header"> <!-- Etiqueta para ofrecerle al browser info de que es un encabezado -->
+                <nav class="nav"> <!-- Etiqueta para ilustrarle al browser que posiblemente es un menu -->
+                    <a href="index.html" class="logo nav-link">TechShop</a>
+                    
+                    <ul class="nav-menu">
+                        
+                        <li class="nav-menu-item"><a href="ejemplo9.html"class="nav-menu-link nav-link">&LeftTriangleBar;</a></li>
+                        <li class="nav-menu-item"><a href="ejemplo2.html"class="nav-menu-link nav-link">&RightTriangleBar;</a></li>
+                        <li class="nav-menu-item"><a href="audios.html"class="nav-menu-link nav-link">Audios</a></li>
+                        <li class="nav-menu-item"><a href="videos.html"class="nav-menu-link nav-link">Videos</a></li>
+                        <li class="nav-menu-item"><a href="iframes.html"class="nav-menu-link nav-link">IFrames</a></li>
+                        <li class="nav-menu-item"><a href="formulario.html"class="nav-menu-link nav-link">Form</a></li>
+                        
+                    </ul>
+
+                </nav>
             </header>
-            <nav id="menu"> <!-- Etiqueta para ilustrarle al browser que posiblemente es un menu -->
-                <a href="ejemplo9.html">Back</a>
-                <a href="index.html">Home</a>
-                <a href="ejemplo2.html">Next</a><br>
-            </nav>
+
             <aside id="barralateral"> <!<!-- Etiqueta para indicar que es una barra lateral al final, ya sea en la izquierda o la derecha -->
                 <h2>Ultimas Noticias</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipiscing elit porttitor elementum nibh a accumsan sociosqu dis sodales egestas turpis, vulputate vivamu</p>
             </aside>
             <section id="contenido">   
-                
+
                 <h2">Nuestros Productos</h2>
-                
-                
+
+
                 <article><!--articulo1-->
                     <header>Portatil XDR5000</header>
                     <p>Lorem ipsum dolor sit amet consectetur adipiscing elit porttitor elementum nibh a accumsan sociosqu dis sodales egestas turpis, vulputate vivamu</p>
@@ -71,52 +81,52 @@
                     <footer>Agregar al Carrito</footer>
 
                 </article> 
-                
-                
-                <article>
-                
-                <header><h2>Resumen de lineas</h2></header>
-                <table border="0">
-                    <thead>
-                        <tr id="encabezadoTabla">
-                            <th>Codigo</th>
-                            <th>Detalle</th>
-                        </tr>
-                    </thead>
-                    <tbody id="tablaDetalle">
-                        <tr>
-                            <td>1</td>
-                            <td>nike</td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>adidas</td>
-                        </tr>
-                        <tr>
-                            <td>3</td>
-                            <td>puma</td>
-                        </tr>
-                        <tr>
-                            <td>4</td>
-                            <td>bape</td>
-                        </tr>
-                        <tr>
-                            <td>5</td>
-                            <td>diadora</td>
-                        </tr>
-                        <tr>
-                            <td>6</td>
-                            <td>pirma</td>
-                        </tr>
-                    </tbody>
-                </table>
 
-                
-                
-             
-                    
-                    
-                    
+
+                <article>
+
+                    <header><h2>Resumen de lineas</h2></header>
+                    <table border="0">
+                        <thead>
+                            <tr id="encabezadoTabla">
+                                <th>Codigo</th>
+                                <th>Detalle</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tablaDetalle">
+                            <tr>
+                                <td>1</td>
+                                <td>nike</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>adidas</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>puma</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>bape</td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>diadora</td>
+                            </tr>
+                            <tr>
+                                <td>6</td>
+                                <td>pirma</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+
+
+
+
+
+
                 </article>
             </section>
             <footer id="piepagina">

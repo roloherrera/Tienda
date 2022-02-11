@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <!<!-- Se actualiza la pagina index para que contenga nuevas etiquetas meta y demas etiquetas para la semantica del body -->
+    <html lang="es">
+        <head>
+            <title>TechShop</title>
+            <meta charset="UTF-8">
+            <meta name="description" content="Esta pagina contiene etiquetas del tipo html5 y luego enlaces o definicion de estilos css3">
+            <meta name="keywords" content="html5, css3, web, fidelitas">
+            <link href="CSS/Estilos.css" rel="stylesheet" type="text/css"/>
+        </head>
+        <body>
+            <header id="encabezado"> <!-- Etiqueta para ofrecerle al browser info de que es un encabezado -->
+                <h1>Ejemplo de audios</h1>
+            </header>
+            <nav id="menu"> <!-- Etiqueta para ilustrarle al browser que posiblemente es un menu -->
+                <a href="ejemplo9.html">Back</a>
+                <a href="index.html">Home</a>
+                <a href="ejemplo2.html">Next</a><br>
+            </nav>
+            <aside id="barralateral"> <!<!-- Etiqueta para indicar que es una barra lateral al final, ya sea en la izquierda o la derecha -->
+                <h2>Ultimas Noticias</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipiscing elit porttitor elementum nibh a accumsan sociosqu dis sodales egestas turpis, vulputate vivamu</p>
+            </aside>
+            <section id="contenido">                   
+                <h2>Ejemplo de audios</h2>
+                <article><!--articulo1-->
+                    <header><h3>Musica Celta</h3></header>
+                    <figure>
+                        <audio controls>
+                            <source src="recursos/audios/musica.mp3" type="audio/mpeg">
+                           Su browser no soporta audios en este formato <code>audio</code>.
+                        </audio>
+                        <figcaption>
+                            <p>Musica oriunda de Irlanda</p>
+                        </figcaption>
+                    </figure>
+                </article>      
+            </section>
+        </body>
+    </html>

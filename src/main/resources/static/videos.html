@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <!<!-- Se actualiza la pagina index para que contenga nuevas etiquetas meta y demas etiquetas para la semantica del body -->
+    <html lang="es">
+        <head>
+            <title>TechShop</title>
+            <meta charset="UTF-8">
+            <meta name="description" content="Esta pagina contiene etiquetas del tipo html5 y luego enlaces o definicion de estilos css3">
+            <meta name="keywords" content="html5, css3, web, fidelitas">
+            <link href="CSS/Estilos.css" rel="stylesheet" type="text/css"/>
+        </head>
+        <body>
+            <header id="encabezado"> <!-- Etiqueta para ofrecerle al browser info de que es un encabezado -->
+                <h1>Ejemplo de videos</h1>
+            </header>
+            <nav id="menu"> <!-- Etiqueta para ilustrarle al browser que posiblemente es un menu -->
+                <a href="ejemplo9.html">Back</a>
+                <a href="index.html">Home</a>
+                <a href="ejemplo2.html">Next</a><br>
+            </nav>
+            <aside id="barralateral"> <!<!-- Etiqueta para indicar que es una barra lateral al final, ya sea en la izquierda o la derecha -->
+                <h2>Ultimas Noticias</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipiscing elit porttitor elementum nibh a accumsan sociosqu dis sodales egestas turpis, vulputate vivamu</p>
+            </aside>
+            <section id="contenido">                   
+                <h2>Ejemplo de videos</h2>
+                <article><!--articulo1-->
+                    <header><h3>Trailer de la pelicula Torpedo</h3></header>
+                    <figure>
+                        
+                        <video width="320" height="240" controls autoplay muted poster="images/torpedo.jpg">
+                            <source src="recursos/videos/torpedo.mp4" type="video/mp4">
+                            Su navegador no soporta videos en este formato <code>video</code>.
+                        </video>
+                        
+                   
+                        <figcaption>
+                            <p>Realizada en 2021</p>
+                        </figcaption>
+                    </figure>
+                </article>      
+            </section>
+        </body>
+    </html>
