@@ -7,25 +7,35 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
-        <h1>Bienvenido</h1>   
+        <h1>Gestion de clientes</h1>
         
-        <table border="1">
-            <thead>
-                <tr>
-                    <th>Nombre</th>
-                    <th>Apellidos</th>
-                    <th>Correo</th>
-                    <th>Telefono</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr th:each="cliente : ${clientes}">
-                    <td th:text="${cliente.nombre}"></td>
-                    <td th:text="${cliente.apellidos}"></td>
-                    <td th:text="${cliente.correo}"></td>
-                    <td th:text="${cliente.telefono}"></td>
-                </tr>
-            </tbody>
-        </table>       
+        <a th:href="@{/nuevoCliente}">Nuevo cliente</a>
+        <div th:if="${clientes != null and !clientes.empty}">
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Apellidos</th>
+                        <th>Correo</th>
+                        <th>Telefono</th>
+                        <th>Modificar</th>
+                        <th>Eliminar</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr th:each="cliente : ${clientes}">
+                        <td th:text="${cliente.nombre}"></td>
+                        <td th:text="${cliente.apellidos}"></td>
+                        <td th:text="${cliente.correo}"></td>
+                        <td th:text="${cliente.telefono}"></td>
+                        <td><a th:href="@{/modificarCliente/}+${cliente.idCliente}">Modificar</a></td>
+                        <td><a th:href="@{/eliminarCliente/}+${cliente.idCliente}">Eliminar</a></td>
+                    </tr>
+                </tbody>
+            </table> 
+        </div>
+        <div th:if="${clientes == null or clientes.empty}">
+            No existe una lista para mostrar
+        </div>
     </body>
 </html>
