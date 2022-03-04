@@ -7,7 +7,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
-        <h1>Gestion de clientes</h1>
+        <header th:replace="plantilla/plantilla :: header" />
+        <h2>Gestion de clientes</h2>
         
         <a th:href="@{/nuevoCliente}">Nuevo cliente</a>
         <div th:if="${clientes != null and !clientes.empty}">
@@ -37,5 +38,6 @@
         <div th:if="${clientes == null or clientes.empty}">
             No existe una lista para mostrar
         </div>
+        <footer th:replace="plantilla/plantilla :: footer" />
     </body>
 </html>
