@@ -1,7 +1,7 @@
 
 package com.tiendaI.dao;
 
-import com.tiendaI.model.Cliente;
+import com.tiendaI.domain.Cliente;
 import org.springframework.data.repository.CrudRepository;
 
 

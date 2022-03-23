@@ -1,7 +1,7 @@
 
 package com.tiendaI.service;
 
-import com.tiendaI.model.Cliente;
+import com.tiendaI.domain.Cliente;
 import java.util.List;
 
 
