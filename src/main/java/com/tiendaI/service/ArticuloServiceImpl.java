@@ -13,35 +13,36 @@ import org.springframework.transaction.annotation.Transactional;
 public class ArticuloServiceImpl implements ArticuloService {
     
     @Autowired
-    private ArticuloDao clienteDao;
+    private ArticuloDao articuloDao;
 
     @Override
-    @Transactional(readOnly= true)
+    @Transactional (readOnly = true) // Para manejar transacciones de lectura
     public List<Articulo> getArticulos(boolean activos) {
-        var lista = (List<Articulo>) clienteDao.findAll();
-        if (activos){lista.removeIf(e -> !e.isActivo());}
+        var lista = (List<Articulo>) articuloDao.findAll();
+        
+        if (activos) {
+            lista.removeIf(e -> !e.isActivo());
+        }
+        
         return lista;
     }
 
     @Override
-    @Transactional
-    public void save(Articulo cliente) {
-        clienteDao.save(cliente);
-       
+    @Transactional // Para manejar transacciones de escritura y lectura
+    public void save(Articulo articulo) {
+        articuloDao.save(articulo);
     }
 
     @Override
     @Transactional
-    public void delete(Articulo cliente) {
-        clienteDao.delete(cliente);
-        
+    public void delete(Articulo articulo) {
+        articuloDao.delete(articulo);
     }
 
     @Override
-    @Transactional(readOnly= true)
-    public Articulo getArticulo(Articulo cliente) {
-        return clienteDao.findById(cliente.getIdArticulo()).orElse(null);
-        
+    @Transactional (readOnly = true) 
+    public Articulo getArticulo(Articulo articulo) {
+        return articuloDao.findById(articulo.getIdArticulo()).orElse(null);
     }
     
 }

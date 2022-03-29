@@ -16,7 +16,7 @@ public class IndexController {
 
     @GetMapping("/")
     public String inicio(Model model) {
-        log.info("Se muestra la pagina index de templates");
+        log.info("Ahora se usa arquitectura MVC");
 
         var articulos = articuloService.getArticulos(true);
 

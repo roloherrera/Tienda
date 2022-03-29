@@ -31,7 +31,7 @@ public class Categoria implements Serializable{
 
     public Categoria(String descripcion, boolean activa) {
         this.descripcion = descripcion;
-        this.activo = activa;
+        this.activo = activo;
     }
 
     
