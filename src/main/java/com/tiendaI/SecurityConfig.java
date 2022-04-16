@@ -16,7 +16,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         auth.inMemoryAuthentication()
                 .withUser("admin")
                 .password("{noop}123")
-                .roles("ADMIN","VENDEDORES","USER")
+                .roles("ADMIN","VENDEDOR","USER")
                 .and()
                 .withUser("vendedor")
                 .password("{noop}123")
@@ -37,7 +37,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                         "/cliente/modificar/**","/cliente/eliminar/**",
                         "/usuario/nuevo", "/usuario/guardar",
                         "/usuario/modificar/**","/usuario/eliminar/**")
-                        .hasRole("Admin")
+                        .hasRole("ADMIN")
                         .antMatchers("/articulo/listado", "/categoria/listado", "/cliente/listado")
                         .hasAnyRole("ADMIN","VENDEDOR")
                         .antMatchers("/")

@@ -17,10 +17,12 @@ public class CategoriaController {
 
     @GetMapping("/categoria/listado")
     public String inicio(Model model) {
-        var categorias = categoriaService.getCategorias(false);
-
-        model.addAttribute("categorias", categorias);
-
+        var categorias=categoriaService.getCategorias(true);
+        
+       
+        model.addAttribute("totalCategorias",categorias.size());
+        
+        model.addAttribute("categorias",categorias);
         return "/categoria/listado";
     }
 
